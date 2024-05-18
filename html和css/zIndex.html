@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <div class="parent-1">
+        <div class="son-1-1">
+            son-1-1
+        </div>
+    </div>
+    <div class="parent-2">
+        <div class="son-2-1">
+            son-2-1
+        </div>
+        <div class="son-2-2">
+            son-2-2
+        </div>
+    </div>
+</head>
+
+<body>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .parent-1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+            z-index: 2;
+        }
+
+        .parent-2 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: relative;
+            top: -50px;
+            left: 70px;
+        }
+
+        .son-1-1 {
+            background-color: green;
+            position: absolute;
+            left: 25%;
+            top: 40%;
+            z-index: 5;
+        }
+
+        .son-2-1 {
+            background-color: yellow;
+            position: absolute;
+            left: 50px;
+            /* top: 50px; */
+            z-index: 1;
+        }
+
+        .son-2-2 {
+            background-color: pink;
+            position: absolute;
+            left: 30px;
+            top: 10px;
+            z-index: 4;
+        }
+    </style>
+</body>
+
+</html>
